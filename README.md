@@ -84,6 +84,8 @@ PROJECT_FOLDER=/home/<USER>/RealworldFirmware`.
 Then, enter the project folder: `cd $PROJECT_FOLDER`.
 Install apktool for disassembling the APKs: `sudo
 ./install_apktool.sh`.  
+
+**NEED to build otacap before this or what?**
   
 The folder `$PROJECT_FOLDER/otacap` contains URL analy-
 sis tool. It depends on the Z3 solver.    
@@ -94,7 +96,7 @@ sis tool. It depends on the Z3 solver.
   
 In folder `$PROJECT_FOLDER/FirmXRay`, we have a
 customized FirmXRay. Add the ghidra.jar file,
-found in https://drive.google.com/file/d/1emNNUBO61lLMdDBbVeI8z5NCdl5GypsG/view?usp=sharing to $PROJECT_FOLDER/FirmXRay/libs/. To build
+found in https://drive.google.com/file/d/1emNNUBO61lLMdDBbVeI8z5NCdl5GypsG/view?usp=sharing to `$PROJECT_FOLDER/FirmXRay/lib/`. To build
 it, run `cd $PROJECT_FOLDER/FirmXRay && make`.  
   
 In folder `$PROJECT_FOLDER/binwalk`, we have a customized
@@ -102,8 +104,8 @@ binwalk. To set up its dependencies and install it:
 1. `cd $PROJECT_FOLDER/binwalk`
 2. Install dependencies:  
 `pip3 install -r requirements.txt && sudo
-pip3 install protobuf==3.6.1`
-3. Install binwalk: `python3 setup.py install`
+pip3 install protobuf==3.6.1` (**protobuf is already in requirements.txt, what is going on?**)
+4. Install binwalk: `python3 setup.py install`
   
 Install Ollama with llama3:
 1. `curl -fsSL https://ollama.com/install.sh |
