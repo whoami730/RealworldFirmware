@@ -105,7 +105,7 @@ binwalk. To set up its dependencies and install it:
 2. Install dependencies:  
 `pip3 install -r requirements.txt && sudo
 pip3 install protobuf==3.6.1` (**protobuf is already in requirements.txt, what is going on?**)
-4. Install binwalk: `python3 setup.py install`
+4. Install binwalk: `python3 setup.py install` (**fails without sudo**)
   
 Install Ollama with llama3:
 1. `curl -fsSL https://ollama.com/install.sh |
@@ -128,8 +128,7 @@ Folder `$PROJECT_FOLDER/FirmFlaw` contains the binary
 analysis tool. To set up its dependencies:  
 1. `chmod 1777 /tmp`
 2. `cd $PROJECT_FOLDER/FirmFlaw`
-3. `mkdir logs res db fidb ghidra_projects
-firmwares`
+3. `mkdir logs res db fidb ghidra_projects firmwares`
 4. Install pyhidra: `pip3 install pyhidra==1.2.0`
 5. `curl -L -O https://github.com/NationalSecurityAgency/ghidra/releases/download/Ghidra_11.1_build/ghidra_11.1_PUBLIC_20240607.zip`
 6. `unzip ghidra_11.1_PUBLIC_20240607.zip`
